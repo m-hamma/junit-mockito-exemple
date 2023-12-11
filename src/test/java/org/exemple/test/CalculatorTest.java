@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import static org.mockito.Mockito.mock;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 
@@ -20,7 +21,7 @@ public class CalculatorTest {
 
     @BeforeEach
     public void before() {
-        calculatorService = Mockito.mock(CalculatorService.class);
+        calculatorService = mock(CalculatorService.class);
         calculator= new Calculator();
     }
     @DisplayName("Test MessageService.get()")
